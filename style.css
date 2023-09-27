@@ -1,11 +1,21 @@
 /*
 Theme Name: My basic PHP Theme
 Author: Enno Hyttrek
-Version: 1.0.0
+Version: 1.0.1
 */
 
+
+img {
+    width: 100%;
+    height: auto;
+}
 
 
 body {
 
+}
+
+
+body.home figure {
+    width: 50%;
 }

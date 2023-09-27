@@ -6,10 +6,13 @@
     <?php wp_head() ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 
     <header>
-        <h1><?php bloginfo('title'); ?></h1>
+                <figure>
+        <?php the_post_thumbnail(); ?>
+        </figure>
+        <h3><?php bloginfo('title'); ?></h3>
     </header>
 
     <nav id="main-nav" class="main-nav">
@@ -23,11 +26,7 @@
                  while ( have_posts() ) : the_post();
         ?>
 
-        <h2><?php the_title(); ?></h2>
-        
-        <figure>
-        <?php the_post_thumbnail(); ?>
-        </figure>
+        <h1><?php the_title(); ?></h1>
 
         <?php
                     the_content();
@@ -40,7 +39,7 @@
 
     <footer>
         <p>©2023 Enno Hyttrek</p>
-        <p>Das ist die index.php</p>
+        <p>Das ist die single.php</p>
     </footer>
 
     <?php wp_footer() ?>

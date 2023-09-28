@@ -14,16 +14,18 @@
                  while ( have_posts() ) : the_post();
         ?>
 
-        <article></article>
-        <h2><?php the_title(); ?></h2>
+        <article>
+            <h2><?php the_title(); ?></h2>
 
-        <figure>
-            <?php the_post_thumbnail(); ?>
-        </figure>
+            <figure>
+                <?php the_post_thumbnail(); ?>
+            </figure>
 
-        <?php
-                    the_content();
+            <?php the_content(); ?>
+                    
+            </article>
       
+        <?php
                 endwhile;
         endif;
         ?>

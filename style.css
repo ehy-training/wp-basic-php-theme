@@ -1,7 +1,7 @@
 /*
 Theme Name: My basic PHP Theme
 Author: Enno Hyttrek
-Version: 1.0.3
+Version: 1.0.4
 */
 
 
@@ -43,6 +43,15 @@ nav.main-nav > div,
     margin: 0 auto;
 }
 
+body.home main .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+    body.home article {
+    padding: 1rem 0;
+}
 
 /*---------------------
 NAVIGATION
@@ -81,6 +90,11 @@ RESPONSIVE (MEDIAQUERIES)
     
     nav.mobile-nav {
     display: none;
+}
+    
+    body.home article {
+    width: 33%;
+    padding: 1rem;
 }
     
 }

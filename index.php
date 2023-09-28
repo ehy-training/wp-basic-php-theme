@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html>
+<?php get_header(); ?>
 
-<head>
-    <title><?php bloginfo('title'); ?></title>
-    <?php wp_head() ?>
-</head>
-
-<body <?php body_class(); ?>>
-
-    <header>
+<header>
+    <div class="container">
         <h1><?php bloginfo('title'); ?></h1>
-    </header>
+    </div>
+</header>
 
-    <nav id="main-nav" class="main-nav">
-        <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-    </nav>
-
-    <main>
+<main>
+    <div class="container">
 
         <?php
         if ( have_posts() ) :
                  while ( have_posts() ) : the_post();
         ?>
 
+        <article></article>
         <h2><?php the_title(); ?></h2>
-        
+
         <figure>
-        <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail(); ?>
         </figure>
 
         <?php
@@ -36,14 +28,7 @@
         endif;
         ?>
 
-    </main>
+    </div>
+</main>
 
-    <footer>
-        <p>©2023 Enno Hyttrek</p>
-        <p>Das ist die index.php</p>
-    </footer>
-
-    <?php wp_footer() ?>
-</body>
-
-</html>
+<?php get_footer(); ?>

@@ -1,8 +1,19 @@
 /*
 Theme Name: My basic PHP Theme
 Author: Enno Hyttrek
-Version: 1.0.2
+Version: 1.0.3
 */
+
+
+/*---------------------
+RESET
+---------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 img {
@@ -10,12 +21,66 @@ img {
     height: auto;
 }
 
-
-body {
-
+nav.main-nav {
+    display: none;
 }
 
 
-body.home figure {
-    width: 50%;
+
+
+/*---------------------
+LAYOUT
+---------------------*/
+
+h1,h2,h3,h4,h5,h6,p {
+    margin-bottom: 1em;
+}
+
+nav.main-nav > div,
+.container {
+    padding: 1rem 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*---------------------
+NAVIGATION
+---------------------*/
+
+nav ul {
+    list-style-type: none;
+}
+
+nav.main-nav > div > ul,
+nav.footer-nav > div > ul {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1em;
+}
+
+nav.mobile-nav {
+    padding: 20px;
+}
+
+nav.mobile-nav li {
+    padding: 0.3em 0;
+}
+
+/*---------------------
+RESPONSIVE (MEDIAQUERIES)
+---------------------*/
+
+
+@media screen and (min-width: 600px) {
+    
+    
+    nav.main-nav {
+    display: block;
+}
+    
+    nav.mobile-nav {
+    display: none;
+}
+    
 }

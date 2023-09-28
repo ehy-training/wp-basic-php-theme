@@ -8,7 +8,7 @@
 </footer>
 
 <nav id="mobile-nav" class="mobile-nav">
-    <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
 </nav>
 
 <?php wp_footer() ?>

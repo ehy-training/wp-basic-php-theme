@@ -1,36 +1,28 @@
-<?php get_header(); ?>
+<!DOCTYPE html>
+<!--Version: 1.1.0-->
+<html>
 
-<header>
-    <div class="container">
-        <h1><?php bloginfo('title'); ?></h1>
-    </div>
-</header>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php bloginfo('title'); ?></title>
+    <?php wp_head() ?>
+</head>
 
-<main>
-    <div class="container">
+<body>
 
-        <?php
-        if ( have_posts() ) :
-                 while ( have_posts() ) : the_post();
-        ?>
+    <?php
+            if ( have_posts() ) :
+                while ( have_posts() ) : the_post();
+    ?>
 
-        <article>
-            <h2><?php the_title(); ?></h2>
 
-            <figure>
-                <?php the_post_thumbnail(); ?>
-            </figure>
+    <?php the_content(); ?>
 
-            <?php the_content(); ?>
-                    
-            </article>
-      
-        <?php
+    <?php
                 endwhile;
-        endif;
-        ?>
+            endif;
+    ?>
 
-    </div>
-</main>
+</body>
 
-<?php get_footer(); ?>
+</html>

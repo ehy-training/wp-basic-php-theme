@@ -1,9 +1,8 @@
 /*
-Theme Name: My basic PHP Theme
+Theme Name: Base PHP Theme
+Version: 1.1.0
 Author: Enno Hyttrek
-Version: 1.0.4
 */
-
 
 /*---------------------
 RESET
@@ -15,86 +14,64 @@ RESET
     box-sizing: border-box;
 }
 
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-nav.main-nav {
-    display: none;
-}
-
-
-
-
 /*---------------------
 LAYOUT
 ---------------------*/
 
-h1,h2,h3,h4,h5,h6,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
     margin-bottom: 1em;
 }
 
-nav.main-nav > div,
+.main-header {
+    overflow: hidden;
+}
+
+.main-content {
+    min-height: 70vh;
+}
+
 .container {
-    padding: 1rem 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-body.home main .container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-    body.home article {
-    padding: 1rem 0;
+    padding: 1rem 20px;
 }
 
 /*---------------------
-NAVIGATION
+COLOR & STYLE
 ---------------------*/
 
-nav ul {
-    list-style-type: none;
+
+body {
+    background: hsl(200,34%,13%);
 }
 
-nav.main-nav > div > ul,
-nav.footer-nav > div > ul {
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 1em;
+.main-header {
+       background: hsl(200,13%,55%); 
 }
 
-nav.mobile-nav {
-    padding: 20px;
+.main-content {
+    background: #fff;
 }
 
-nav.mobile-nav li {
-    padding: 0.3em 0;
+.main-footer {
+    color: #fff;
 }
 
 /*---------------------
-RESPONSIVE (MEDIAQUERIES)
+TYPOGRAPHY
 ---------------------*/
 
-
-@media screen and (min-width: 600px) {
-    
-    
-    nav.main-nav {
-    display: block;
-}
-    
-    nav.mobile-nav {
-    display: none;
-}
-    
-    body.home article {
-    width: 33%;
-    padding: 1rem;
-}
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     
 }

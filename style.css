@@ -58,10 +58,12 @@ body {
        background: hsl(200,13%,55%); 
 }
 
+
 .main-content {
     background: #fff;
 }
 
+body,
 .main-footer {
     color: #fff;
 }

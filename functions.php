@@ -2,7 +2,7 @@
 /*
 Basic PHP Theme
 Enno Hyttrek
-Version: 1.1.1
+Version: 1.2.0
 */
 
 function myCustomTheme_stylesheets() {
@@ -22,18 +22,4 @@ function register_my_menus() {
  }
  add_action( 'init', 'register_my_menus' );
 
-add_theme_support( 'disable-layout-styles' );
 add_theme_support( 'post-thumbnails' );
-
-//Experimental!
-//https://fullsiteediting.com/lessons/how-to-remove-default-block-styles/
-
-function prefix_remove_core_block_styles() {
-	wp_dequeue_style( 'wp-block-group' );
-}
-add_action( 'wp_enqueue_scripts', 'prefix_remove_core_block_styles' );
-
-function prefix_remove_global_styles() {
-	wp_dequeue_style( 'global-styles' );
-} 
-add_action( 'wp_enqueue_scripts', 'prefix_remove_global_styles', 100 );

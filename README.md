@@ -5,11 +5,10 @@ Ein einfaches WordPress PHP Theme, um den klassischen Weg des WordPress Theming 
 
 ---
 
-November 2023
 Enno Hyttrek
 ehy.training@gmail.com
 https://ennohyttrek.de
 
 ---
 
- Version: 1.1.1
+ Version: 1.2.0
